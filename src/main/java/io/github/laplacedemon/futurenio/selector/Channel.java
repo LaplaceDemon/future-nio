@@ -18,7 +18,7 @@ public class Channel<T> {
 		boolean add = this.blockQueue.add(msg);
 		if(add && selectorBlocking != null) {
 			if(selectorBlocking.get()) {
-				selector.notify();
+				selector.notifyAll();
 			}
 		}
 	}

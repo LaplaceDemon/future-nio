@@ -13,7 +13,7 @@ public class SocketChannelFactory {
 		SocketAddress saddr = new InetSocketAddress(hostname, port);
 		SocketChannel socketChannel = SocketChannel.open();
 		socketChannel.configureBlocking(false);
-		boolean connect = socketChannel.connect(saddr);
+		socketChannel.connect(saddr);
 		return socketChannel;
 	}
 	

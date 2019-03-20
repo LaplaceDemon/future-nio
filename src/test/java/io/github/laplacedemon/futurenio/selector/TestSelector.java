@@ -12,7 +12,8 @@ public class TestSelector {
 	@Test
 	public void testEmptySelector() throws InterruptedException {
 		final Selector selector = new Selector();
-		selector.loop();
+		ChannelLooper looper = selector.makeLooper();
+		looper.loop();
 	}
 	
 	@Test
@@ -26,7 +27,8 @@ public class TestSelector {
 			System.out.println(e);
 		});
 		
-		selector.loop();
+		ChannelLooper looper = selector.makeLooper();
+		looper.loop();
 	}
 	
 	@Test
@@ -80,11 +82,51 @@ public class TestSelector {
 			System.out.println(e);
 		});
 		
-		selector.loop();
+//		selector.loop();
+		
+//		new Thread(()-> {
+//			try {
+//				selector.loop();
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//		}).start();
+//		
+//		new Thread(()-> {
+//			try {
+//				selector.loop();
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//		}).start();
+//		
+//		new Thread(()-> {
+//			try {
+//				selector.loop();
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//		}).start();
+		
+		Thread.sleep(1000*3600*24);
 	}
 	
 	@Test
 	public void testDelayChannel() throws InterruptedException {
+		final Selector selector = new Selector();
+		
+		selector.register(new DelayChannel(1000,1000), ()->{
+			System.out.println("1");
+		}).register(new DelayChannel(2000,2000), ()->{
+			System.out.println("2");
+		});
+		
+		ChannelLooper looper = selector.makeLooper();
+		looper.loop();
+	}
+	
+	@Test
+	public void testMutilThreadChannel() throws InterruptedException {
 		final Selector selector = new Selector();
 		
 		selector.register(new DelayChannel(1000), ()->{
@@ -93,13 +135,9 @@ public class TestSelector {
 			System.out.println("2");
 		});
 		
-		selector.loop();
+		
+		
+		
 	}
 	
-//	public static void main(String[] args) {
-//		ScheduledExecutorService es = Executors.newScheduledThreadPool(1);
-//		es.scheduleAtFixedRate(() -> {
-//			System.out.println("hello");
-//		}, 1, 1, TimeUnit.SECONDS);
-//	}
 }
