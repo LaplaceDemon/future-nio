@@ -5,9 +5,9 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.util.NoSuchElementException;
 
-import io.github.laplacedemon.futurenio.IOReactor;
-import io.github.laplacedemon.futurenio.IOSession;
-import io.github.laplacedemon.futurenio.SocketChannelFactory;
+import io.github.laplacedemon.futurenio.reactor.IOReactor;
+import io.github.laplacedemon.futurenio.reactor.IOSession;
+import io.github.laplacedemon.futurenio.reactor.SocketChannelFactory;
 
 public class AsyncHttpClient {
 	

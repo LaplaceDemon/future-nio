@@ -10,7 +10,7 @@ import java.nio.file.StandardOpenOption;
 import org.junit.Before;
 import org.junit.Test;
 
-import io.github.laplacedemon.futurenio.WriteableBufferQueue;
+import io.github.laplacedemon.futurenio.reactor.WriteableBufferQueue;
 
 public class TestWriteBuffer {
 	WriteableBufferQueue wbq;

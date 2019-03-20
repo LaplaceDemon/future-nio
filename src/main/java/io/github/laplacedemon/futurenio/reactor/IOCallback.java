@@ -1,4 +1,4 @@
-package io.github.laplacedemon.futurenio;
+package io.github.laplacedemon.futurenio.reactor;
 
 import java.nio.ByteBuffer;
 

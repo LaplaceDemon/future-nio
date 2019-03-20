@@ -3,7 +3,7 @@ package io.github.laplacedemon.futurenio.http;
 import java.util.HashMap;
 import java.util.Map;
 
-import io.github.laplacedemon.futurenio.ReadBuffer;
+import io.github.laplacedemon.futurenio.reactor.ReadBuffer;
 
 public class HttpParseEntry {
 	public static enum HttpContentParseWay {

@@ -2,9 +2,9 @@ package io.github.laplacedemon.futurenio.http;
 
 import java.nio.ByteBuffer;
 
-import io.github.laplacedemon.futurenio.IOCallback;
-import io.github.laplacedemon.futurenio.IOSession;
-import io.github.laplacedemon.futurenio.ReadBuffer;
+import io.github.laplacedemon.futurenio.reactor.IOCallback;
+import io.github.laplacedemon.futurenio.reactor.IOSession;
+import io.github.laplacedemon.futurenio.reactor.ReadBuffer;
 
 public class HttpContenasdfstCallback implements IOCallback {
 

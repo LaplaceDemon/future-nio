@@ -10,7 +10,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import io.github.laplacedemon.futurenio.ReadBuffer;
+import io.github.laplacedemon.futurenio.reactor.ReadBuffer;
 
 public class TestReadBuffer {
 	

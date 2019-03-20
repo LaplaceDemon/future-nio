@@ -6,6 +6,9 @@ import java.nio.channels.SocketChannel;
 import java.util.NoSuchElementException;
 
 import io.github.laplacedemon.futurenio.http.HttpCallback;
+import io.github.laplacedemon.futurenio.reactor.IOReactor;
+import io.github.laplacedemon.futurenio.reactor.IOSession;
+import io.github.laplacedemon.futurenio.reactor.SocketChannelFactory;
 
 public class TestHttp {
 	public static void main(String[] args) throws IOException {
